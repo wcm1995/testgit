@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>mouse</title>
+	    <style type="text/css">
+		    #div{overflow:auto;width:200px;height:200px;border:2px solid gray;margin-bottom:20px;}
+		    #content{width:200px;height:100px;border:2px solid gray;}
+	    </style>
+	</head>
+	<body>
+		<div id="div">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod,tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo,consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse,cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non,proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div id="content"></div>
+		<script type="text/javascript">
+            var div=document.getElementById("div");
+            var content=document.getElementById("content");
+            var text=document.getElementsByTagName("p")[0];
+            div.onscroll=function(){
+                content.innerHTML="内容滚动了";
+            }
+            div.onmousemove=function(){
+            	text.style.color="red";
+            }
+            div.onmouseout=function(){
+            	text.style.color="green";
+            }
+		</script>
+	</body>
+</html>
