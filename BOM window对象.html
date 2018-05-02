@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>打开/关闭页面</title>
+    </head>
+    <body>
+       <input type="button" value="关闭本页面" id="close">
+       <input type="button" value="打开慕课网" id="open">
+       <script type="text/javascript">
+           /*window.onload=function(){*/
+           var close=document.getElementById("close");
+           var open=document.getElementById("open");
+           close.onclick=function(){
+            window.close();
+           }
+           open.onclick=function(){
+            window.open("http://www.imooc.com");
+           }
+         /* }*/
+       </script>
+    </body>
+</html>
+ -->
+
+
+ <!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>打开/关闭页面</title>
+    </head>
+    <body>
+       <input type="button" name="" value="打开页面">
+       <script type="text/javascript">
+            var a=document.getElementsByTagName("input")[0];
+            a.onclick=function(){
+                var result=window.confirm("您确定要打开页面吗？");
+                if(result){
+                   window.open("newPage.html","newPage","width=300,height=300,top=200,left=600,location=no,menubar=no,scrollbars=no,status=no"); 
+                }else{
+                    window.close();
+                }
+            }
+       </script>
+    </body>
+</html>
+
+
