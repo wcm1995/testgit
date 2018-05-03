@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>闪烁的文字</title>
+        <style type="text/css">
+            div{
+                width:200px;
+                height:200px;
+                line-height:200px;
+                border:2px solid gray;
+                text-align:center;
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+    <h3>会闪烁的文字</h3>
+        <div id="text"> </div>
+        <script type="text/javascript">
+            var content=document.getElementById("text");
+            var num=0;
+            setInterval(function(){
+                console.log(num);
+                num++;
+                if(num%2===0){
+                    text.innerHTML="☆☆☆今日特卖☆☆☆"
+                }else{
+                    text.innerHTML= "★★★今日特卖★★★"
+                }
+            },500)
+        </script>
+    </body>
+</html> 
+
+<!--     <body>
+    <h3>会闪烁的文字</h3>
+    <div id="text"> </div>
+    <script type="text/javascript">
+        var content=document.getElementById("text");
+        var num=0;
+        function myFun(){
+            if(num==0){
+                content.innerHTML="☆☆☆今日特卖☆☆☆";
+                num++;
+            }else{
+                content.innerHTML="★★★今日特卖★★★";
+                num--;
+            }
+        }
+        setInterval(myFun,500);
+    </script>
+</body>
+</html> -->
