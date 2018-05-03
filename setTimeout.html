@@ -40,11 +40,20 @@
         },1000)*/
 
         //法二 多次调用setTimeout()
-        var num=1,max=10,timer=null;
-        setTimeout(function() {
+ /*       var num=1,max=10,timer=null;
+        function inCreamentNum(){
         	console.log(num);
-        }, 1000);
+        	num++;
+        	if(num<=max){
+        		setTimeout(inCreamentNum,1000);
+        	}else{
+        		clearTimeout(timer);
+        	}
+        }
+        timer=setTimeout(inCreamentNum,1000);
+*/
 
+        
 	</script>
 
 	
