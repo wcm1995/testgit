@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="index3.html">前往页面3.html</a><br/><br/>
+	<input type="button" value="回到页面1" id="btn">
+	<script>
+		var btn=document.getElementById("btn");
+		btn.onclick=function(){
+			history.go(-1);
+		}
+
+	</script>
+</body>
+</html>

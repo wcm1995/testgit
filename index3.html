@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="回到页面1" id="btn">
+	<input type="button" value="回到页面2" id="btn">
+	<script>
+	var btn1=document.getElementsByTagName("input")[0];
+	var btn2=document.getElementsByTagName("input")[1];
+	btn1.onclick=function(){
+		history.go(-2); 
+	}
+	btn2.onclick=function(){
+		history.go(-1); 
+	}
+	</script>
+</body>
+</html>

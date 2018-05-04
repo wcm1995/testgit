@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>userAgent</title>
+    </head>
+    <body>
+       <input type="button" value="点击获取浏览器信息" id="browser">
+       <script type="text/javascript">
+           var btn=document.getElementById("browser");
+            btn.onclick=function(){
+                function getBrowser(){
+                    var explorer=navigator.userAgent.toLowerCase(),browser;
+                    if(explorer.indexOf("Mozilla")>-1){
+                      browser="Mozilla";
+                    }else if(explorer.indexOf("chrome")>-1){
+                      browser="谷歌";
+                    }else if(explorer.indexOf("Firefox")>-1){
+                      browser="火狐";
+                    }else if(explorer.indexOf("Safari")>-1){
+                      browser="Safari";
+                    }
+                    return browser;
+                }
+                var explorer=getBrowser();
+                alert("您使用的浏览器是:"+explorer+"浏览器");
+            }
+/*            var explorer=navigator.userAgent;
+            alert(explorer);*/
+       </script>
+    </body>
+</html>
