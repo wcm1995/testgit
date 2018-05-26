@@ -9,16 +9,18 @@ var index=0,
     pics=byId("banner").getElementsByTagName("div"),
     option=byId("option").getElementsByTagName("li"),
     len=pics.length;
+    box=byId("box");
 
 function slideImg(){
+	changeImg();
 	var main=byId("main");
 	//滑过清除定时器，离开继续
-	main.onmouseover=function(){
+	box.onmouseover=function(){
     	//滑过清除定时器
     	if(timer) clearInterval(timer);
 
 	}
-	main.onmouseout=function(){
+	box.onmouseout=function(){
 		timer=setInterval(function(){
 			index++;
 			if(index>=len){
@@ -29,7 +31,7 @@ function slideImg(){
 		},1000)                            
 	}                                               //调用onmouseout事件
 	//自动在main上触发鼠标离开的事件                                               
-	main.onmouseout();                              //调用onmouseout方法    
+	box.onmouseout();                              //调用onmouseout方法    
 
 	//遍历所有选项，且绑定事件，点击选项切换图片
 	for(var d=0;d<len;d++){

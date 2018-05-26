@@ -2,6 +2,10 @@
 	margin:0;
 	padding:0;
 }
+.box{
+	margin:0 auto;
+	width:1200px;
+}
 
 .header{
 	width:1200px;
