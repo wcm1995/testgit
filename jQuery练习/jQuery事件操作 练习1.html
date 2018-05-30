@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>习题</title>
+    <style>
+        .cards div {
+            float: left;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            text-indent: -9999px;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<h1>添加事件处理</h1>
+
+<div class="cards">
+    <div>43</div>
+    <div>21</div>
+    <div>56</div>
+    <div>16</div>
+    <div>89</div>
+    <div>94</div>
+    <div>46</div>
+    <div>26</div>
+    <div>67</div>
+    <div>90</div>
+    <div>25</div>
+    <div>10</div>
+    <div>84</div>
+    <div>76</div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+<script>
+    $(function () {
+        $('.cards').on('click','div',function(event){
+            console.log($(this),event.target)
+            $(this).css('text-indent','0');
+        })
+
+    });
+</script>
+</body>
+</html>

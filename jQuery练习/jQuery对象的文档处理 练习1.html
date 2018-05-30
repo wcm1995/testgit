@@ -1,0 +1,52 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li class="first">第一个li</li>
+		<li class="second">第二个li</li>
+	</ul>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+        $(function(){
+		    var fli=$('.first');
+		    var sli=$('.second');
+		    fli.prepend('<a href="#">点我</a>')
+		    sli.append('<a href="#">快点我</a>')
+		    fli.before('<h3>我是标题</h3>')
+		    sli.after('<li>第三个li</li>')
+		    
+		})
+	</script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>第一个li</li>
+		<li>第二个li</li>
+	</ul>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+        $(function(){
+		    $('li').eq(0).prepend('<a href="#">点我</a>');
+		   /* $('li').eq(1).append('<a href="#">快点我</a>');*/
+		    $('<a href="#">快点我</a>').appendTo($('li').eq(1))
+		    $('ul').append('<li>第三个li</li>');
+		    $('ul').prepend('<h3>我是标题</h3>');
+		    
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery事件小特效</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .main{
+            margin-top: 30px;
+            margin-left: 30px;
+            width: 300px;
+            height: 330px;
+            background:#fff;
+        }
+        .nav{
+            height:30px;
+            font-size:14px;
+            margin-left:15px;
+        }
+        .nav span{
+            display: inline-block;
+        
+            height: 28px;
+        
+            width: 60px;
+        
+            line-height: 28px;
+        
+            background: blue;
+        
+            text-align: center;
+        
+            border: 1px solid blue;
+        
+            border-top-left-radius: 5px;
+        
+            border-top-right-radius: 5px;
+        
+            z-index: 999;
+            color:white;
+        } 
+        .box{
+             width: 278px;
+
+            height: 278px;
+
+            border: 1px solid blue;
+
+            padding-left: 20px;
+
+            padding-top: 20px;
+        }
+         .nav .active{
+        
+           background-color: #fff;
+        
+           border-bottom: 1px solid #fff;
+        
+           margin-top: 1px;
+           color:black;
+    
+    }
+
+    </style> 
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <span class="active">DOM0</span>
+            <span>DOM2</span>
+            <span>JQuery</span>     
+        </div>
+        <div class="box">
+            DOM0
+        </div>
+        
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+    <script type="text/javascript">
+        var span=$('span'),
+            box=$('.box');
+        span.on('click',function(){
+            span.map(function(){
+                $(this).removeClass('active')
+            });
+          $(this).addClass('active');
+            box.text($(this).text());
+        })
+    </script>
+</body>
+
+</html>
