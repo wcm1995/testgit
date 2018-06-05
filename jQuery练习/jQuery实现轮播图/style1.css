@@ -1,0 +1,91 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	margin:0 auto;
+	width:1200px;
+}
+h1{margin:20px 0px;}
+.main{
+	width:1200px;
+	height:460px;
+	overflow:hidden;
+	position:relative;
+	border:10px solid #bbb;
+}
+.banner{
+	width:1200px;
+	height:460px;
+	overflow:hidden;
+	position:relative;
+}
+.banner-slide{
+	width:1200px;
+	height:460px;
+	background-repeat:no-repeat;
+	position:absolute;
+	display:none;
+}
+.slide-active{
+	display:block;
+}
+.slide1{
+	background-image:url("作业素材/1.jpg");
+}
+.slide2{
+	background-image:url("作业素材/2.jpg");
+}
+.slide3{
+	background-image:url("作业素材/3.jpg");
+}
+.slide4{
+	background-image:url("作业素材/4.jpg");
+}
+.slide5{
+	background-image:url("作业素材/5.jpg");
+}
+
+.button{
+	position:absolute;
+	width:50px;
+	height:80px;
+	top:50%;
+	margin-top:-40px;	
+}
+.button:hover{
+	background-color:#333;
+	opacity:0.6;
+	filter:alpha(opacity=80);  /*兼容其他浏览器*/
+}
+.prev{
+	left:10px;
+	background:url("作业素材/pre2.png") no-repeat center center;
+
+}
+.next{
+	left:auto;
+	right:10px;
+	background:url("作业素材/pre.png") no-repeat center center;
+}
+
+.dots{
+	position:absolute;
+	right:10px;
+	bottom:20px;
+	text-align:right;
+}
+.dots span{
+	display:inline-block;
+	width:15px;
+	height:15px;
+	line-height:15px;
+	border-radius:50%;
+	background:rgba(7,12,27,0.4);
+	box-shadow:0 0 0 2px rgba(255,255,255,0.8) inset;  /*添加阴影 水平垂直方向为0，阴影的距离为0，模糊程度2px 再设置阴影颜色*/ 
+	margin-left:8px;
+	cursor:pointer;
+}
+.dots span.active{
+	box-shadow:0 0 0 2px rgba(7,12,27,0.4) inset;
+	background:#fff;
