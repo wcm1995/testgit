@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/* .box{width:200px;height:200px;background:pink;color:black;} */
+		.box{width:100px;height:100px;background:pink;color:black;border:10px solid black;padding:20px;margin:30px;}
+		.b10{border:10px solid blue;}
+		.m10{margin:10px;}
+		.p10{padding:10px;}
+		.red{background:red;}
+		.purple{background:purple;}
+	</style>
+</head>
+<body>
+	<div class="box hide" id="demo" >div</div>
+	<ul>
+    <li class="item1">item1</li>
+    <li class="item2">item2</li>
+    <li class="item3">item3</li>
+    <li class="item4">item4</li>
+    <li class="item5">item5</li>
+    <li class="item6">item6</li>
+    <li class="item7">item7</li>
+    <li class="item8">item8</li>
+    <li class="item9">item9</li>
+</ul>
+<script src="jquery-3.3.1.js"></script>
+<!-- <script>
+	$(function(){
+		var element=$('#demo');
+		element.css({
+			width:100,
+			'background-color':'red',
+			marginTop:20
+
+		});
+		//通过函数设置样式
+		element.css('height',function(index,value){
+			console.log(value)  //控制台打印出的数值有单位
+			return parseInt(value,10)+50;  //转化为十进制
+		})
+        	console.log(element.css(['height','width']))
+	})
+</script> -->
+
+<script>
+/*	$(function(){
+		var element=$('#demo');
+		element.addClass('red b10 m10 p10');
+		element.removeClass('b10');
+	})*/
+
+	//函数设置
+/*	$(function(){
+		var element=$('#demo');
+		element.addClass(function(index,className){
+			console.log(index)
+			console.log(className)
+			return 'red'
+		})
+	})*/
+
+
+	//toggleClass()
+/*	$(function(){
+		var element=$('#demo');
+		element.toggleClass('hide purple');
+	})
+*/
+/*	$(function(){
+		$('li').each(function(index){
+			$(this).toggleClass('red',index%3===0);
+		})
+*/
+		
+	/*})*/
+
+
+	$(function(){
+		var element=$('#demo');
+		console.log(element.width())
+		console.log(element.height())
+		console.log(element.innerWidth())
+		console.log(element.innerHeight())
+		console.log(element.outerWidth())
+		console.log(element.outerHeight())
+		console.log(element.outerWidth(true))
+		console.log(element.outerHeight(true))
+	})
+</script>
+	
+</body>
+</html>

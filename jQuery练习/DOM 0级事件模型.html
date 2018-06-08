@@ -1,0 +1,62 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM0级 事件模型</title>
+</head>
+<body>
+	<p id="example" onclick="console.log('click')">
+	jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+    </p>
+    <script src="jquery-3.3.1.js"></script>
+    在JS中，增加事件处理函数
+    <script>
+    	document.getElementById('example').onclick=function(event){
+    		console.log('click me');
+    	}
+    	document.getElementById('example').onclick=function(event){
+    		console.log('click me2');
+    	}
+    </script>
+</body>
+</html> -->
+
+<!-- DOM 0级事件模型只能添加一个事件处理函数，后面添加则会将前面的覆盖 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM0级 事件模型</title>
+</head>
+<body>
+	<div id="p1">
+		<div id="p1-1">
+			<div id="p1-1-1">
+				<div id="p1-1-1-1">
+					<p>
+						jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+				    </p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <script>
+    	document.getElementById('p1').onclick=function(event){
+    		console.log('Click p1');
+    	}
+    	document.getElementById('p1-1').onclick=function(event){
+    		console.log('click p1-1');
+    	}
+    	document.getElementById('p1-1-1').onclick=function(event){
+    		console.log('click p1-1-1');
+    	}
+    	document.getElementById('p1-1-1-1').onclick=function(event){
+    		/*event.stopPropagation();  */
+    		event.cancelBubble=true;    //阻止事件冒泡的办法
+    		console.log('click p1-1-1-1');
+    	}
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM2级 事件模型</title>
+</head>
+<body>
+	<p id="example">
+	jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+    </p>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+    	var element=document.getElementById('example');
+    	element.addEventListener('click',function(event){
+            console.log('click me');
+        },false);
+    </script>
+</body>
+</html> 

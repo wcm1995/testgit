@@ -1,0 +1,41 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>创建HTML</title>
+</head>
+<body>
+	<div id="div">div</div>
+	<script src="jquery-3.3.1.js"></script>
+	<script>
+		$(function(){
+        	var DOMObject=document.getElementById('div');
+        	var jQueryObject=$('#div');
+        	console.log(DOMObject);
+        	console.log(jQueryObject);
+		})
+	</script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.3.1.js"></script>
+	<script>
+		$(function(){
+			var link=$('<a>',{
+				text:'百度',
+				href:'http://www.baidu.com',
+			})
+			link.appendTo('body')
+		})
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

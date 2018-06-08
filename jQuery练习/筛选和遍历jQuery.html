@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>习题</title>
+</head>
+<body>
+ 
+<h1>筛选和遍历jQuery对象</h1>
+ 
+<ul>
+    <li class="item1">item1</li>
+    <li class="item2">item2</li>
+    <li class="item3">item3</li>
+    <li class="item4">item4</li>
+    <li class="item5">item5</li>
+    <li class="item6">item6</li>
+    <li class="item7">item7</li>
+    <li class="item8">item8</li>
+    <li class="item9">item9</li>
+</ul>
+ 
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+<!-- <script>
+    $(function () {
+ 
+        //此处写代码
+                
+        var a=[];
+        $('li').each(function(index){
+            a[index]=this.innerHTML;
+                     
+        });
+        //结果放在循环外，否则会导致每次index变化都产生一个数组
+        console.log(a);
+    });
+
+     //方法二：
+                /*var b=[];
+                var liarr=$('li').map(function(index,domElement){
+                            b[index]=this.innerHTML;
+                             
+                });
+                //结果放在循环外，否则会导致每次index变化都产生一个数组
+                console.log(b)
+    });*/
+</script> -->
+
+
+<script>
+    $(function(){
+        /*console.log($('li').not('.item4'))*/
+       /* console.log($('li').filter('.item4'))*/
+/*      console.log($('.item1').add('.item2'))*/
+       /* console.log($('li').slice(3))*/
+        console.log($('li').slice(3,6))
+    })
+</script>
+</body>
+</html>
