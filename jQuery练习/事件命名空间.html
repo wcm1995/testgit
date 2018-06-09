@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件命名空间</title>
+</head>
+<body>
+	<ul>
+        <li class="item1">item1</li>
+        <li class="item2">item2</li>
+        <li class="item3">item3</li>
+        <li class="item4">item4</li>
+        <li class="item5">item5</li>
+        <li class="item6">item6</li>
+        <li class="item7">item7</li>
+        <li class="item8">item8</li>
+        <li class="item9">item9</li>
+    </ul>
+    <button id="even">点击偶数</button>
+    <button id="odd">点击奇数</button>
+    <button id="all">全部点击</button>
+
+    <script src="jquery-3.3.1.js"></script>
+	<script>
+		$(function(){
+			$('li:odd').on('click.even',function(e){
+				console.log('%o 偶数',$(this))
+			})
+			$('li:even').on('click.odd',function(e){
+				console.log('%o 奇数',$(this))
+			})
+			$('li').eq(0).on('click.even.0',function(){
+				console.log('%o 0',$(this))
+			})
+
+			$('#even').on('click',function(){
+				$('li').trigger('click.even')
+			})
+
+			$('#odd').click(function(){
+				$('li').trigger('click.odd')
+			})
+
+
+			$('#odd').off()
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加事件处理</title>
+</head>
+<body>
+    <div class="item">
+        <p>jQuery is a fast, small, and feature-rich JavaScript library. </p>
+    </div>
+    <ul>
+        <li class="item1">item1</li>
+        <li class="item2">item2</li>
+        <li class="item3">item3</li>
+        <li class="item4">item4</li>
+        <li class="item5">item5</li>
+        <li class="item6">item6</li>
+        <li class="item7">item7</li>
+        <li class="item8">item8</li>
+        <li class="item9">item9</li>
+    </ul>
+    <div id="p1">
+        <div id="p1-1">
+            <div id="p1-1-1">
+                <div id="p1-1-1-1">
+                    <p>
+                        jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        /*$(function(){
+            $('div').on('click','#p1-1',{foo:'bar'},function(event){
+                console.log('p clicked1 %o',event.data);
+            })
+             $('div').on('mouseover','#p1-1',{foo:'bar'},function(event){
+                console.log('p clicked2 %o',event.data);
+            })
+
+        });*/
+
+        
+        //法一.给每个条目都增加事件处理函数
+        /*$(function(){
+            $('li').on('click',function(event){
+                console.log('%o li checked',$(this));
+            })
+        })*/
+        //法二.给父元素添加事件处理函数,借助事件冒泡机制
+        /*$(function(){
+            $('ul').on('click',function(event){
+                console.log('%o checked',$(event.target));
+            })
+        })*/
+
+
+        //阻止冒泡
+        $(function(){
+            /*$('div').on('click',function(event){
+                event.stopPropagation();
+                console.log('%o clicked',$(this));
+            })*/
+             $('p').one('click',function(event){
+                console.log('%o clicked',$(this));
+            })
+
+        })
+
+    </script>
+</body>   
+</html> 

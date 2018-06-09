@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移除事件处理</title>
+</head>
+<body>
+	<p>
+	jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+    </p>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+    	$('p').on('click',function(event){
+    		console.log('checked1')
+    	}).on('click',function(event){
+    		console.log('checked2')
+    	})
+    	$('p').off()
+
+
+    	//移除特定函数
+    	$(function(){
+    		var clicked2=function(event){
+    			console.log('clicked2');
+    		}
+    		$('p').on('click',function(event){
+    			console.log('clicked');
+    		}).on('click',clicked2).on('mouseover',function(){
+    			console.log('mouseover');
+    		})
+    		$('p').off('click',clicked2);
+    	})
+    </script>
+</body>
+</html>

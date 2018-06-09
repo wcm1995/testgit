@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>触发事件</title>
+</head>
+<body>
+ 
+<h1>触发事件</h1>
+ 
+<ul>
+    <li class="item1">item1</li>
+    <li class="item2">item2</li>
+    <li class="item3">item3</li>
+    <li class="item4">item4</li>
+    <li class="item5">item5</li>
+    <li class="item6">item6</li>
+    <li class="item7">item7</li>
+    <li class="item8">item8</li>
+    <li class="item9">item9</li>
+</ul>
+ <button id="all">全部标记为已读</button>
+<script src="jquery-3.3.1.js"></script>
+<script>
+    /*$(function(){
+        $('li').on('click',function(event){
+            console.log('已读 %o',$(this));
+            return '123';
+        })
+        $('#all').on('click',function(event){
+            $('li').trigger('click');
+           $('li').triggerHandler('click');          //只触发jQuery对象集合中第一个元素的事件处理函数
+            console.log( $('li').trigger('click'))
+            console.log( $('li').triggerHandler('click'))   //返回的是事件处理函数的返回值，而不是jQuery对象
+        })  
+    }) */
+
+    //传入数据
+    $(function(){
+        $('li').on('click',function(event,arg1,arg2){
+            console.log('已读 %o',$(this));
+            console.log(arg1);
+            console.log(arg2);
+
+        })
+        $('#all').on('click',function(event){
+            console.log($('li').trigger('click',[1,2]));
+
+        })  
+    }) 
+</script>
